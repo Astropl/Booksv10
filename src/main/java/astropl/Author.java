@@ -26,16 +26,16 @@ public class Author {
         this.lastName = lastName;
     }
 
-    public String getName() {
-        return name;
+    public String getName(String name) {
+        return this.name;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLastName(String lastName) {
+        return this.lastName;
     }
 
     public void setLastName(String lastName) {
@@ -43,6 +43,7 @@ public class Author {
     }
 
     public Author addAuthor(String name, String lastName) {
+        //author = getName(name)+ getLastName(lastName);
         author.setName(name);
         author.setLastName(lastName);
         return author;
