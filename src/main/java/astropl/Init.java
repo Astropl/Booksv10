@@ -2,7 +2,8 @@ package astropl;
 
 public class Init {
 
-    String tytul,author;
+    String tytul, author;
+
     public Init() {
     }
 
@@ -13,12 +14,17 @@ public class Init {
     }
 
 
-    public void makeBook()
-    {
+    public void makeBook() {
+        Author author = new Author();
+
+
+        author.authorInit();
         Book book = new Book();
         book.addBook();
 
-        System.out.println("Tytuł "+ book.getTytul() + " autor "+ book.getAuthor());
+
+        System.out.println("Autor " + author.getAuthor());
+        System.out.println("Tytul " + book.getTytul());
 
     }
 }
