@@ -2,7 +2,6 @@ package astropl;
 
 public class Init {
 
-    String tytul, author;
 
     public Init() {
     }
@@ -21,10 +20,21 @@ public class Init {
         author.authorInit();
         Book book = new Book();
         book.addBook();
+        Books books = new Books();
+        books.addBooks(author.getName(), author.getLastName(), book.getTytul());
 
+        System.out.println("\nAutor \t" + author.getAuthor());
+        System.out.println("Tytul \t" + book.getTytul());
 
-        System.out.println("Autor " + author.getAuthor());
-        System.out.println("Tytul " + book.getTytul());
+        System.out.println(" Czek z Books");
+
+//        for(int x=0;x< 1;x++) {
+//            System.out.println(books);
+//        }
+
+        
+        books.showBooks();
+        makeBook();
 
     }
 }
