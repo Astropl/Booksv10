@@ -29,8 +29,9 @@ public class Books
 
     public void showBooks()
     {
-        for( int x = 0; x<books.size()-1;x++) {
-            System.out.println(books.get(x));
+        for( int x = 0; x<=books.size()-1;x++) {
+            System.out.println("");
+            System.out.println((x+1) + ". "+ books.get(x));
         }
     }
 
