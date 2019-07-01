@@ -19,10 +19,10 @@ public class Books
 
     public void addBooks(String name, String lastName, String tytul)
     { books.add(name +" "+ lastName+ " "+ tytul);
-    setName(name);
-    setLastName(lastName);
-    setTytul(tytul);
-    setBooks(books);
+    //setName(name);
+    //setLastName(lastName);
+    //setTytul(tytul);
+    //setBooks(books);
 
         return;
     }
@@ -70,10 +70,10 @@ public class Books
     @Override
     public String toString() {
         return "Books{" +
-                "name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", tytul='" + tytul + '\'' +
-                ", books=" + books +
+//                "name='" + name + '\'' +
+//                ", lastName='" + lastName + '\'' +
+//                ", tytul='" + tytul + '\'' +
+                " books=" + books +
                 '}';
     }
 }

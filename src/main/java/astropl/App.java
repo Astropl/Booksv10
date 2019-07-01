@@ -1,10 +1,12 @@
 package astropl;
 
+import java.io.FileNotFoundException;
+
 /**
  * Hello world!
  */
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         Init init = new Init();
         init.init();
 

@@ -1,5 +1,8 @@
 package astropl;
 
+import astropl.OperationText.SaveText;
+
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Init {
@@ -7,19 +10,19 @@ public class Init {
     Books books = new Books();
     Author author = new Author();
 
-    public Init() {
+    public Init() throws FileNotFoundException {
     }
 
-    public void init() {
+    public void init() throws FileNotFoundException {
         System.out.println("Inicjalizacja");
 
         makeBook();
 
+        //saveText(author.getName());
     }
 
 
-    public void makeBook() {
-
+    public void makeBook() throws FileNotFoundException {
 
 
         author.authorInit();
@@ -38,19 +41,18 @@ public class Init {
 //        }
 
 
-
-
         wyborMenu();
 
 
     }
 
-    public void wyborMenu() {
+    public void wyborMenu() throws FileNotFoundException {
         int x = 0;
         Scanner sc = new Scanner(System.in);
         System.out.println("\n\n*********************");
         System.out.println("1. Dodoaj ksiazke       *");
         System.out.println("2. Prejrzyj ksiazki     *\n\n");
+        System.out.println("3. Zapisz               *");
         int choice = sc.nextInt();
 
         switch (choice) {
@@ -64,8 +66,39 @@ public class Init {
                 System.out.println("wybrałes 2");
                 books.showBooks();
                 break;
+            case 3:
+
+                saveText1();
+                break;
 
 
         }
+
     }
-}
+
+    public void saveText1() throws FileNotFoundException {
+        //
+        {
+            SaveText saveText2 = new SaveText(books);
+            //saveText2(books);
+        }
+
+//    private void saveText(Books books) {
+//        saveText(books);
+//    }
+
+//        @Override
+//        public String toString () {
+//            return "Init{" +
+//                    "book=" + book +
+//                    ", books=" + books +
+//                    ", author=" + author +
+//                    '}';
+//        }
+    }
+
+
+    }
+
+
+
