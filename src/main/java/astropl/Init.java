@@ -3,6 +3,7 @@ package astropl;
 import astropl.OperationText.SaveText;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Init {
@@ -13,7 +14,7 @@ public class Init {
     public Init() throws FileNotFoundException {
     }
 
-    public void init() throws FileNotFoundException {
+    public void init() throws IOException {
         System.out.println("Inicjalizacja");
 
         makeBook();
@@ -22,7 +23,7 @@ public class Init {
     }
 
 
-    public void makeBook() throws FileNotFoundException {
+    public void makeBook() throws IOException {
 
 
         author.authorInit();
@@ -46,7 +47,7 @@ public class Init {
 
     }
 
-    public void wyborMenu() throws FileNotFoundException {
+    public void wyborMenu() throws IOException {
         int x = 0;
         Scanner sc = new Scanner(System.in);
         System.out.println("\n\n*********************");
@@ -76,7 +77,7 @@ public class Init {
 
     }
 
-    public void saveText1() throws FileNotFoundException {
+    public void saveText1() throws IOException {
         //
         {
             SaveText saveText2 = new SaveText(books);

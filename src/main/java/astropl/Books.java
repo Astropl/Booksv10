@@ -69,11 +69,11 @@ public class Books
 
     @Override
     public String toString() {
-        return "Books{" +
+        return "\nBooks{" +
 //                "name='" + name + '\'' +
 //                ", lastName='" + lastName + '\'' +
 //                ", tytul='" + tytul + '\'' +
-                " books=" + books +
+                " \nbooks=" + books +
                 '}';
     }
 }
